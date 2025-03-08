@@ -30,7 +30,7 @@ func TestGetAPIKey(t *testing.T) {
 			req.Header.Set(tt.header, tt.apiKey)
 
 			// Test GetAPIKey function
-			key, err := GetAPIKey(req.Header)
+			key, _ := GetAPIKey(req.Header)
 
 			// Check returned API Key
 			if key != tt.result {
